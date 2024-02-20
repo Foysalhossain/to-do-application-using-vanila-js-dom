@@ -25,7 +25,7 @@ let addTask = function (event) {
     todoUl.appendChild(listItem);
     newTask.value = "";
     // bind the new list item to the incomplete list
-    bindInCompleteItems(listItem, completeTask)
+    bindInCompleteItems(listItem, completeTask);
 }
 
 let completeTask = function () {
@@ -51,3 +51,18 @@ let bindInCompleteItems = function (taskItem, checkboxclick) {
     let checkBox = taskItem.querySelector('input[type="checkbox"]');
     checkBox.onchange = checkboxclick;
 }
+
+let bindCompletedItems = function (taskItem, deleteButtonClick) {
+    let deleteButton = taskItem.querySelector('.delete');
+    deleteButton.onClick = deleteButtonClick;
+}
+
+for (let i = 0; i < todoUl.children.length; i++) {
+    bindInCompleteItems(todoUl.children[i], completeTask);
+}
+
+for (let i = 0; i < completeUl.children.length; i++) {
+    bindCompletedItems(completeUl.children[i], completeTask);
+}
+
+form.addEventListener('submit', addTask);
