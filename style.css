@@ -1,0 +1,37 @@
+.container {
+    font-family: "Fira Sans", sans-serif;
+    max-width: 40%;
+    background-color: #009688;
+    padding: 50px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.new-task-container {
+    margin: auto;
+    text-align: left;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.todo-list {
+    text-align: left;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#itmes {
+    padding-left: 0px;
+}
+
+.item {
+    list-style: none;
+}
