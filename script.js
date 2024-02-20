@@ -18,3 +18,30 @@ const createTask = function (task) {
 
     return listItem;
 }
+
+let addTask = function (event) {
+    event.preventDefault();
+    let listItem = createTask(newTask.value);
+    todoUl.appendChild(listItem);
+    newTask.value = "";
+    // bind the new list item to the incomplete list
+    bindInCompleteItems(listItem, completeTask)
+}
+
+let completeTask = function () {
+    let listItem = this.parentNode;
+    let deleteBtn = document.createElement('button');
+    deleteBtn.innerText = 'Delete';
+    deleteBtn.className = 'delete';
+    listItem.appendChild(deleteBtn);
+
+    let checkBox = listItem.querySelector('input[type="checkbox"]');
+    checkBox.remove();
+    completeUl.appendChild(listItem);
+    bindCompletedItems(listItem, deleteTask);
+}
+
+let bindInCompleteItems = function (taskItem, checkboxclick) {
+    let checkBox = taskItem.querySelector('input[type="checkbox"]');
+    checkBox.onchange = checkboxclick;
+}

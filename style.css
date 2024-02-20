@@ -25,6 +25,10 @@
     padding: 20px;
 }
 
+#addTask {
+    cursor: pointer;
+}
+
 .todo-list {
     text-align: left;
     background-color: aliceblue;
