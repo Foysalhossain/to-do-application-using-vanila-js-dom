@@ -12,9 +12,14 @@
     text-transform: uppercase;
 }
 
+.task-section {
+    display: flex;
+    justify-content: space-between;
+}
+
 .new-task-container {
     margin: auto;
-    text-align: left;
+    text-align: center;
     background-color: aliceblue;
     border-radius: 5px;
     padding: 20px;
@@ -32,6 +37,26 @@
     padding-left: 0px;
 }
 
+#right-side-box {
+    padding-left: 0px;
+}
+
 .item {
     list-style: none;
+}
+
+.complete-list {
+    text-align: left;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.delete {
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
 }
